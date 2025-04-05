@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment Aziendale</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta SEO -->
+    <meta name="description" content="Scopri come migliorare la sicurezza aziendale con il risk assessment. Scarica il documento e compila il form per maggiori informazioni.">
+    <!-- Open Graph per Social Media -->
+    <meta property="og:title" content="Risk Assessment Aziendale">
+    <meta property="og:description" content="Scopri le migliori strategie di gestione del rischio aziendale.">
+    <meta property="og:image" content="res/img/logo-unipegaso.png">
+    <meta property="og:url" content="URL_DELLA_PAGINA">
+
+   <script>
+    function enableDownload() {
+        var nomeAzienda = document.getElementById("nome-azienda").value.trim();
+        var downloadBtn = document.getElementById("download-btn");
+        var loadingText = document.getElementById("loading-text");
+
+        if (nomeAzienda !== "") {
+            loadingText.style.display = "inline"; 
+            downloadBtn.setAttribute("disabled", "true");
+            setTimeout(function() {
+                loadingText.style.display = "none"; 
+                downloadBtn.removeAttribute("disabled"); 
+            }, 2000);
+        } else {
+            loadingText.style.display = "none";
+            downloadBtn.setAttribute("disabled", "true");
+        }
+    }
+    function downloadPDF() {
+        var nomeAzienda = document.getElementById("nome-azienda").value.trim();
+        if (!nomeAzienda) {
+            alert("Inserisci il nome della tua azienda");
+            return;
+        }
+        var filePath = "res/files/documento.pdf";  
+        // Creazione di un link temporaneo per il download
+        var link = document.createElement("a");
+        link.href = filePath;
+        link.setAttribute("download","documento.pdf"); 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+</head>
+  
+<body class="body">
+    <header>
+        <div class="container">
+            <h1>Sviluppo di un software per la sicurezza aziendale</h1>
+            <img src="res/img/logo-unipegaso.png">
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="col-2">
+            <section class="introduction">
+                <h2>Introduzione</h2>
+                <p>Il Risk Assessment: cos’è e perché è così importante nella strategia aziendale. Il Risk assessment è un processo importante nella strategia di gestione del rischio di un'azienda: scopri le fasi, gli obiettivi e le figure professionali coinvolte.</p>
+                <h2>Che cos’è il risk assessment?</h2>
+                <p>La valutazione del rischio, meglio conosciuta come risk assessment, è l'identificazione dei pericoli che potrebbero avere un impatto negativo sulla capacità di un'organizzazione di condurre il proprio business. Queste valutazioni aiutano ad identificare i rischi aziendali reali e forniscono misure, processi e controlli per ridurre l'impatto di queste minacce sulle operazioni aziendali.</p>
+            </section>
+        </div>
+
+        <div class="col-2">
+            <section class="download">
+                <h2>Inserisci il nome della tua azienda per scaricare l'informativa</h2>
+                <input type="text" id="nome-azienda" name="nome-azienda" onkeyup="enableDownload()">
+                <span id="loading-text" style="display: none;" aria-live="polite">Loading...</span>
+                <div class="center-button">
+                    <button id="download-btn" class="download-btn" onclick="downloadPDF()" disabled>Scarica il Documento</button>
+                </div>
+            </section>
+            <section class="google-form">
+                <h2>Compila il Google Form</h2>
+                <div class="center-button">
+                    <a href="https://forms.gle/QTFNaUG1ViP7fc279" target="_blank" class="google-form-btn">Vai al Form</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Luca Tricarico - Matricola 0312301666 - Tutti i diritti riservati 2025 </p>
+            <ul>
+                <li><a href="#" id="privacy">Privacy</a></li>
+                <li><a href="#" id="terms">Termini e condizioni</a></li>
+                <li><a href="https://it.linkedin.com/in/luca-tricarico-8180b1132" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+   <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" id="back-to-top-btn">Back to Top</button>
+
+    <script>
+        var backToTopBtn = document.getElementById("back-to-top-btn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "inline-block"; 
+            } else {
+                backToTopBtn.style.display = "none"; 
+            }
+        };
+    </script>
+</body>
+</html>
+
