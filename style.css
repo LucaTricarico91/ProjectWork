@@ -161,9 +161,9 @@ p {
 .google-form-btn .icon {
     margin-right: 8px;
 }
-    
+/* Sfondo scuro */
 footer {
-    background-color: #222;  /* Sfondo scuro */
+    background-color: #222;  
     color: white;  
     text-align: center;  
     padding: 20px 0;  
@@ -174,7 +174,6 @@ footer p {
     font-size: 14px;  
     margin: 10px 0;  
 }
-
 /* Stili per la lista di link nel footer */
 footer ul {
     list-style: none;  
@@ -182,15 +181,13 @@ footer ul {
     margin: 10px 0;  
     display: flex;  
     justify-content: center;  
-    align-items: center;  /
+    align-items: center;
     gap: 20px; 
 }
-
 /* Stili per gli elementi della lista */
 footer ul li {
     display: inline-block;  
 }
-
 /* Stili per i link */
 footer ul li a {
     text-decoration: none;  
@@ -198,8 +195,6 @@ footer ul li a {
     font-size: 16px;  
     transition: color 0.3s;  
 }
-
-/* Cambia colore del link al passaggio del mouse */
 footer ul li a:hover {
     color: #f39c12;  
 }
