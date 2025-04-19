@@ -79,17 +79,17 @@
 
         <div class="col-2">
             <section class="download">
-                <h2>Per scaricare il documento inserisci il nome della tua azienda</h2>
+                <h2>Consulta il doc esplicativo, inserisci il nome della tua azienda</h2>
                 <input type="text" id="nome-azienda" name="nome-azienda" onkeyup="enableDownload()">
                 <span id="loading-text" style="display: none;" aria-live="polite">Loading...</span>
                 <div class="center-button">
-                    <button id="download-btn" class="download-btn" onclick="downloadPDF()" disabled>Scarica il Documento</button>
+                    <button id="download-btn" class="download-btn" onclick="downloadPDF()" disabled>Download</button>
                 </div>
             </section>
             <section class="google-form">
                    <div class="center-button">
                       <a href="https://forms.gle/QTFNaUG1ViP7fc279" target="_blank" class="google-form-btn">
-                        <span class="icon">📝</span> lasciaci un feedback
+                        <span class="icon">📝</span>Lascia un feedback
                       </a>
                    </div>
             </section>
@@ -107,16 +107,25 @@
         </div>
     </footer>
    <!--bottone per la risalita della pagina -->
-    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" id="back-to-top-btn">Torna su ^</button>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" id="back-to-top-btn">⬆️</button>
+     <!--bottone per la risalita della pagina -->
     <script>
-        var backToTopBtn = document.getElementById("back-to-top-btn");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopBtn.style.display = "inline-block"; 
+        const backToTopBtn = document.getElementById("back-to-top-btn");
+        window.addEventListener("scroll", function () {
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            
+            if (scrollTop > 100) {
+              backToTopBtn.classList.add("show");
             } else {
-                backToTopBtn.style.display = "none"; 
+              backToTopBtn.classList.remove("show");
             }
-        };
+          });
+          backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+               top: 0,
+               behavior: "smooth"
+          });
+        });
     </script>
 </body>
 </html>
