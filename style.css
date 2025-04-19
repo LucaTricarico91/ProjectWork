@@ -151,10 +151,15 @@ p {
     transition: background-color 0.5s;
     text-align: center;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
 }
 
 .google-form-btn:hover, .download-btn:hover {
     background-color: #732d91;
+}
+.google-form-btn .icon {
+    margin-right: 8px;
 }
     
 footer {
