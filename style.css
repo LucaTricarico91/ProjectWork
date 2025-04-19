@@ -230,19 +230,27 @@ footer ul li a:hover {
     
 /* Pulsante di BackToTop */
 #back-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 5px;
-    cursor: pointer; 
-    font-size: 16px; 
-    display: none; 
-    z-index: 1000; 
-    transition: opacity 0.3s, transform 0.3s;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 16px;
+  font-size: 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+#back-to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 /* Effetto Hover */
 #back-to-top-btn:hover {
