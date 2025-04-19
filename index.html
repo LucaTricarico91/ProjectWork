@@ -22,7 +22,7 @@
         var nomeAzienda = document.getElementById("nome-azienda").value.trim();
         var downloadBtn = document.getElementById("download-btn");
         var loadingText = document.getElementById("loading-text");
-
+        // verifica condizione 
         if (nomeAzienda !== "") {
             loadingText.style.display = "inline"; 
             downloadBtn.setAttribute("disabled", "true");
@@ -41,8 +41,10 @@
             alert("Inserisci il nome della tua azienda");
             return;
         }
-        var filePath = "res/files/documento.pdf";   // filePath del documento da scaricare
-        var link = document.createElement("a"); // link temporaneo per il download
+        // filePath del documento da scaricare
+        var filePath = "res/files/documento.pdf"; 
+        // creazione link temporaneo per il download  
+        var link = document.createElement("a"); 
         link.href = filePath;
         link.setAttribute("download","documento.pdf"); 
         document.body.appendChild(link);
@@ -50,11 +52,13 @@
         document.body.removeChild(link);
     }
 </script>
+    
 </head>
 <body class="body">
     <header>
         <div class="container">
             <h1>IL RISK ASSESSMENT NELL’ERA DIGITALE </h1>
+            <h1>Scopri le migliori strategie di gestione del rischio aziendale>
             <img src="res/img/logo-unipegaso.png">
         </div>
     </header>
@@ -64,9 +68,11 @@
             <section class="introduction">
                 <h2>Introduzione</h2>
                 <p>Il Risk Assessment: cos’è e perché è così importante nella strategia aziendale. 
-                   Il Risk assessment è un processo importante nella strategia di gestione del rischio di un'azienda: scopri le fasi, gli obiettivi e le figure professionali coinvolte.</p>
-                <h2>Che cos’è il risk assessment?</h2>
-                <p>La valutazione del rischio, meglio conosciuta come risk assessment, è l'identificazione dei pericoli che potrebbero avere un impatto negativo sulla capacità di un'organizzazione di condurre il proprio business. Queste valutazioni aiutano ad identificare i rischi aziendali reali e forniscono misure, processi e controlli per ridurre l'impatto di queste minacce sulle operazioni aziendali.</p>
+                   Il Risk assessment è un processo importante nella strategia di gestione del rischio di un'azienda: scopri le fasi, gli obiettivi e le azioni da intraprendere.</p>
+                <h2>Che cos’è il Risk Assessment?</h2>
+                <h2></h2>
+                <p>La valutazione del rischio, meglio conosciuta come risk assessment, è l'identificazione dei pericoli che potrebbero avere un impatto negativo sulla capacità di un'organizzazione di condurre il proprio business.
+                   Queste valutazioni aiutano ad identificare i reali rischi aziendali e forniscono misure, processi e controlli per ridurre l'impatto di queste minacce sulle operazioni aziendali.</p>
             </section>
         </div>
 
