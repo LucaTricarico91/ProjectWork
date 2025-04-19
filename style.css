@@ -18,7 +18,7 @@ body {
     background-attachment: fixed; 
 }
 
-/* Header */
+/* Intestazione*/
 header {
     background-color: rgba(44, 62, 80, 0.7);
     backdrop-filter: blur(5px); /* Aggiungi un effetto di sfocatura */
@@ -107,7 +107,6 @@ p {
     height: 30px;
     animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -200,7 +199,7 @@ footer ul li a:hover {
     color: #f39c12;  
 }
 
-/* Media Queries per schermi più piccoli */
+/* Media Queries per smartphone */
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
@@ -245,7 +244,7 @@ footer ul li a:hover {
     z-index: 1000; 
     transition: opacity 0.3s, transform 0.3s;
 }
-/* Hover - quando si passa sopra il pulsante */
+/* Effetto Hover quando si passa sopra il pulsante */
 #back-to-top-btn:hover {
     background-color: #0056b3; 
 }
